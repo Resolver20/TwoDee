@@ -1,0 +1,48 @@
+@import "./player.scss";
+@import "./Controller.scss";
+body{
+    margin:0px;
+    padding:0px;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    gap:100px;
+}
+.Frame{
+    width:80vw;
+    height:700px;
+    background-color:pink;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+}
+.Box{
+    @extend .Frame;
+    width:70vw;
+    height:500px;
+    box-shadow:none;
+    background-color: salmon;
+    border:1px solid grey;
+    border-radius:20px;
+}
+.Screen{
+    // @extend .Box;
+    background-color: blanchedalmond;
+    width:95%;
+    height:95%;
+
+}
+.Controller{
+    border-radius:12px;
+    width:60vw;
+    height:90px;
+    background-color: grey;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}

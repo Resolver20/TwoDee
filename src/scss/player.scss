@@ -1,0 +1,31 @@
+:root{
+    --scale:3;
+    --row:0;
+    --end-position:calc(416px*var(--scale));
+    --step-count:13;
+}
+.Player_Box{
+    width:calc(32px*var(--scale));
+    height:calc(32px*var(--scale));
+    position:relative;
+    // background-color: red;
+    top:calc(100% - calc(32px*var(--scale)));
+    overflow:hidden;
+}
+.character_image{
+    position:relative;
+    width:calc(416px*var(--scale));
+    height:calc(256px*var(--scale));
+    bottom:calc(var(--row)*calc(32px*var(--scale)));
+    animation:player_animation 1s steps(var(--step-count));
+    image-rendering: pixelated;
+    animation-iteration-count: infinite;
+}
+@keyframes player_animation{
+    from{
+        right:0px;
+    }
+    to{
+        right:var(--end-position);
+    }
+}
